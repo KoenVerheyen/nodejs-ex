@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import {Panel} from "nes-core-frontend/lib/components/core/Panel";
 import {Select, Button} from 'antd'
 import IdentityFormSelect from "./IdentityFormSelect";
 
@@ -129,7 +128,7 @@ export default class DevLoginPageComponent extends React.Component<Props, State>
 
 
     render() {
-        return (<Panel style={{ display: 'block'}}>
+        return (<div style={{ display: 'block'}}>
             <div style={{ display: 'flex'}}>
             <div style={{width: LABEL_LENGTH}}>{'Token: '}</div>
             <Select value={this.props.token} onChange={this.props.onSelectToken} style={{width: 200}}>
@@ -172,6 +171,6 @@ export default class DevLoginPageComponent extends React.Component<Props, State>
                 <Button onClick={this.onSubmitIdentity.bind(this)} loading={this.props.loading}>Login</Button>
             </div>) : undefined}
 
-        </Panel>)
+        </div>)
     }
 }

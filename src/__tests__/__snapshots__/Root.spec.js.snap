@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering connected root 1`] = `
+<Component>
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/rad"
+    />
+    <Route
+      render={[Function]}
+    />
+  </Switch>
+</Component>
+`;
+
+exports[`rendering disconnected root 1`] = `
+<Component>
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/rad"
+    />
+    <Route
+      render={[Function]}
+    />
+  </Switch>
+</Component>
+`;
+
+exports[`rendering disconnected root in development 1`] = `<Connect(DevLoginPageComponent) />`;
