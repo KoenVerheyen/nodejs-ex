@@ -1,7 +1,9 @@
 //  OpenShift sample Node application
 var express = require('express'),
     app     = express(),
-    morgan  = require('morgan');
+    morgan  = require('morgan'),
+    argv = require('minimist')(process.argv),
+    path = require('path');
     
 Object.assign=require('object-assign')
 
@@ -104,5 +106,19 @@ initDb(function(err){
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
+
+
+// EXPRESS
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/rad/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'rad', 'index.html'));
+});
+
+const server = app.listen(argv.p || argv.port || argv['default-port'], function () {
+    const host = server.address().address;
+    const port = server.address().port;
+    console.log('"RAD Frontend" listening at http://%s:%s', host, port);
+});
 
 module.exports = app ;

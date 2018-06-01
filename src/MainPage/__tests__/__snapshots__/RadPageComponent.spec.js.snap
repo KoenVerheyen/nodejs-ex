@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadPageComponent Standard 1`] = `
+<withRouter(WithSize(WithCorrelation(Connect(WithFetchStatus(WithUserIdentity(Page))))))
+  breadcrumb={
+    Array [
+      Object {
+        "link": "/",
+        "title": "Home",
+      },
+      Object {
+        "link": "/rad",
+        "title": "Rad",
+      },
+      Object {
+        "link": "/rad/query",
+        "title": "Query",
+      },
+    ]
+  }
+  title="RAD"
+>
+  <RadRoutingComponent
+    location={
+      Object {
+        "pathname": "/rad/query",
+      }
+    }
+    match={
+      Object {
+        "path": "/rad",
+      }
+    }
+  />
+</withRouter(WithSize(WithCorrelation(Connect(WithFetchStatus(WithUserIdentity(Page))))))>
+`;

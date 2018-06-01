@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdentityFormSelect basic with no value set 1`] = `
+<Select
+  choiceTransitionName="zoom"
+  name="person"
+  onChange={[Function]}
+  prefixCls="ant-select"
+  showSearch={false}
+  transitionName="slide-up"
+  value=""
+>
+  <Option
+    key="1"
+    value={1}
+  >
+    John Doe
+  </Option>
+  <Option
+    key="2"
+    value={2}
+  >
+    Jack Doe
+  </Option>
+</Select>
+`;
+
+exports[`IdentityFormSelect basic with value set 1`] = `
+<Select
+  choiceTransitionName="zoom"
+  name="person"
+  onChange={[Function]}
+  prefixCls="ant-select"
+  showSearch={false}
+  transitionName="slide-up"
+  value={1}
+>
+  <Option
+    key="1"
+    value={1}
+  >
+    John Doe
+  </Option>
+  <Option
+    key="2"
+    value={2}
+  >
+    Jack Doe
+  </Option>
+</Select>
+`;

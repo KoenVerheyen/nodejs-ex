@@ -4,6 +4,17 @@
   "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
   "dependencies": {
+    "antd": "~3.1.6",
+    "moment": "~2.20.1",
+    "react": "~16.2.0",
+    "react-dom": "~16.2.0",
+    "react-redux": "~5.0.7",
+    "react-router-dom": "~4.2.2",
+    "react-scripts": "~1.1.1",
+    "redux": "~3.7.2",
+    "redux-logger": "~2.6.1",
+    "redux-observable": "~0.18.0",
+    "rxjs": "~5.5.10",
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "ejs": "^2.4.1",
@@ -13,22 +24,61 @@
     "morgan": "^1.7.0",
     "object-assign":"4.1.0"
   },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "copy-webpack-plugin": "^4.4.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "flow-bin": "^0.70.0",
+    "flow-coverage-report": "^0.5.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "react-app-rewire-less": "^2.1.1",
+    "react-app-rewired": "^1.5.0",
+    "react-test-renderer": "^16.3.2",
+    "redux-mock-store": "^1.5.1"
+  },
   "engine": {
     "node": "*",
     "npm": "*"
   },
   "scripts": {
-    "start": "node server.js",
-    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
+    "start": "PORT=$npm_package_config_default_port BROWSER=none react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "flow": "flow",
+    "flow-coverage": "flow-coverage-report"
+  },
+  "babel" : {
+    "presets": [ "flow"]
+  },
+  "flow-coverage-report": {
+    "includeGlob": [ "src/**/*.js"],
+    "excludeGlob": [ "node_modules/**", "**/__tests__/*.spec.js", "**/__mocks__/**", "src/registerServiceWorker.js", "src/testsSetup.js"],
+    "type": [ "text"],
+    "threshold": 90
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupTestFrameworkScriptFile": "./src/testsSetup.js",
+    "testResultsProcessor": "jest-sonar-reporter"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/openshift/nodejs-ex.git"
+    "url": "http://github.com/KoenVerheyen/nodejs-ex.git"
   },
-  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "author": "Koen Verheyen <Koen.Verheyen@gmail.com>",
   "license": "CC-BY-1.0",
   "bugs": {
-    "url": "http://github.com/openshift/nodejs-ex/issues"
+    "url": "http://github.com/KoenVerheyen/nodejs-ex/issues"
   },
-  "homepage": "http://github.com/openshift/nodejs-ex"
+  "homepage": "http://github.com/Koen.Verheyen/nodejs-ex"
 }
