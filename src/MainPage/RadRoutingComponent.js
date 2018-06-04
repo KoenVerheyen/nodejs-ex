@@ -2,7 +2,6 @@
 import React from 'react'
 import {Switch, Route, Link} from 'react-router-dom'
 import {Alert} from 'antd'
-import QueryComponent from '../query/QueryComponent'
 import type {Match, Location} from "react-router-dom";
 
 type Props = {
@@ -20,7 +19,7 @@ function get404Description(location, retryLocation) {
 
 export default function RadRoutingComponent({match, location} : Props) {
     return (<Switch>
-        <Route path={`${match.path}/query`} component={QueryComponent} />
+        <Route path={`${match.path}/query`}><div>{Hello World!}</div></Route>
         <Route render={(props) => <div><Alert message='Page not found' description={get404Description(props.location, match.path)} type='error' showIcon /></div>}/>
     </Switch>)
 }
