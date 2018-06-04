@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/auto/local_build/dhws065/disk1/ws-git/nodejs-ex/src/MainPage/__tests__/RadRoutingComponent.spec.js">
+    <testCase name="Routing query" duration="6"/>
+    <testCase name="Routing 404" duration="9"/>
+  </file>
+  <file path="/auto/local_build/dhws065/disk1/ws-git/nodejs-ex/src/__tests__/Root.spec.js">
+    <testCase name="rendering connected root" duration="3"/>
+  </file>
+  <file path="/auto/local_build/dhws065/disk1/ws-git/nodejs-ex/src/MainPage/__tests__/RadPageComponent.spec.js">
+    <testCase name="RadPageComponent Standard" duration="2"/>
+  </file>
+  <file path="/auto/local_build/dhws065/disk1/ws-git/nodejs-ex/src/MainPage/__tests__/BreadCrumb.spec.js">
+    <testCase name="BreadCrumb Test menu" duration="3"/>
+  </file>
+</testExecutions>

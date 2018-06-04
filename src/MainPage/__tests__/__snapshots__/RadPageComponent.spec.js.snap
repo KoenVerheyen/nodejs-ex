@@ -1,20 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadPageComponent Standard 1`] = `
-<withRouter(WithSize(WithCorrelation(Connect(WithFetchStatus(WithUserIdentity(Page))))))
+<div
   breadcrumb={
     Array [
       Object {
-        "link": "/",
-        "title": "Home",
-      },
-      Object {
         "link": "/rad",
-        "title": "Rad",
+        "title": "Rad Home",
       },
       Object {
-        "link": "/rad/query",
-        "title": "Query",
+        "link": "/rad/project",
+        "title": "AIRAC amendments",
+      },
+      Object {
+        "link": "/rad/rs",
+        "title": "Restrictions",
+      },
+      Object {
+        "link": "/rad/az",
+        "title": "Aerodrome sets",
       },
     ]
   }
@@ -32,5 +36,5 @@ exports[`RadPageComponent Standard 1`] = `
       }
     }
   />
-</withRouter(WithSize(WithCorrelation(Connect(WithFetchStatus(WithUserIdentity(Page))))))>
+</div>
 `;

@@ -3,7 +3,6 @@ import React from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {connect} from "react-redux";
 import RadPageComponent from "./MainPage/RadPageComponent";
-import DevLoginPageContainer from "./login/DevLoginPageContainer";
 
 type Props = {
     connected: boolean
@@ -12,15 +11,7 @@ type Props = {
 class Root extends React.Component<Props> {
 
     render() {
-
-
-        if (process.env.NODE_ENV === 'development') {
-            if (!this.props.connected) {
-                return <DevLoginPageContainer/>
-            }
-        }
-
-        return (
+       return (
             <BrowserRouter>
                 <Switch>
                     <Route path='/rad' component={RadPageComponent}/>

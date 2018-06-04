@@ -19,7 +19,7 @@ function get404Description(location, retryLocation) {
 
 export default function RadRoutingComponent({match, location} : Props) {
     return (<Switch>
-        <Route path={`${match.path}/query`}><div>{Hello World!}</div></Route>
+        <Route path={`${match.path}/query`}><div>{'Hello World!'}</div></Route>
         <Route render={(props) => <div><Alert message='Page not found' description={get404Description(props.location, match.path)} type='error' showIcon /></div>}/>
     </Switch>)
 }

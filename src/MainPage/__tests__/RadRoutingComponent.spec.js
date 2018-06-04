@@ -8,7 +8,7 @@ describe('Routing', () => {
     test('query', () => {
         let wrapper = mount(<MemoryRouter initialEntries={['/rad/query']}><Route path='/rad' component={RadRoutingComponent}/></MemoryRouter>)
 
-        expect(wrapper.find('QueryComponent').length).toEqual(1)
+        expect(wrapper.find('div').length).toEqual(1)
     })
 
     test('404', () => {
